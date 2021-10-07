@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 
 const Item = (props) => {
-  const { removeItem } = useContext(CartContext);
+  const { amount, removeItem } = useContext(CartContext);
   return (
     <div className="shopping-cart_item">
       <img src={props.image} alt={`${props.title} book`} />
@@ -12,6 +12,7 @@ const Item = (props) => {
         <p>$ {props.price}</p>
         <button onClick={() => removeItem(props.id)}>Remove from cart</button>
       </div>
+      <span>Quantity: {amount}</span>
     </div>
   );
 };
