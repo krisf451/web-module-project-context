@@ -16,6 +16,8 @@ function App() {
   const [cart, setCart] = useState([]);
   const [amount, setAmount] = useState(0);
 
+  //test change
+
   const addItem = (item) => {
     //added in a check to see if the item already exists in the cart
     if (cart.find((cartItem) => cartItem.id === item.id)) {
